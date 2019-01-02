@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  button {
+    padding: 0 15px;
+    line-height: 38px;
+    color: hsl(0, 0%, 13.3%);
+    background-color: #fff;
+    border: 1px solid hsl(0, 0%, 93.3%);
+    font-size: 14px;
+    border-radius: 0;
+    &:hover, &:focus {
+      color: #ffffff;
+      background: hsl(228.9, 100%, 54.3%);
+      border-color: hsl(228.9, 100%, 54.3%);
+    }
+  }
+}
+
+
+
+

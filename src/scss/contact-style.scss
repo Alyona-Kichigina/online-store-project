@@ -1,0 +1,66 @@
+.contact-block {
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    .contact-info {
+      .info-item {
+        padding-bottom: 15px;
+        position: relative;
+        padding-left: 45px;
+        &:last-child {
+          padding-bottom: 0;
+        }
+        .fa {
+          font-size: 20px;
+          color: hsl(228.9, 100%, 54.3%);
+          position: absolute;
+          left: 0;
+          top: 4px;
+          &.fa-home {
+            font-size: 24px;
+          }
+          &.fa-phone {
+            font-size: 22px;
+          }
+        }
+        .title {
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 700;
+          color: hsl(0, 0%, 13.3%);
+        }
+        p {
+          font-size: 14px;
+          line-height: 24px;
+          padding: 2px 0;
+          color: hsl(0, 0%, 46.7%);
+          margin: 0;
+        }
+      }
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 45%));
+      grid-column-gap: 5%;
+      grid-auto-flow: row dense;
+      .form-group {
+        margin-bottom: 10px;
+        .form-control {
+          font-size: 13px;
+          line-height: 26px;
+          color: hsl(0, 0%, 60%);
+          border: 1px solid;
+          border-color: hsl(0, 0%, 93.3%);
+          padding-left: 20px;
+          resize: none;
+          width: 100%;
+          height: calc(2.25rem + 2px);
+          display: block;
+        }
+        &.message {
+
+        }
+      }
+    }
+  }
+}

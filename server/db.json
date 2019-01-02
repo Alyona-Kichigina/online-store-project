@@ -1,0 +1,609 @@
+{
+  "products": [
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 17000,
+      "id":"1",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-2.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 18500,
+      "id":"2",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1000,
+      "id":"3",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1800,
+      "id":"4",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-5.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500,
+      "id":"5",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500000,
+      "id":"6",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 17000,
+      "id":"7",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-2.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 18500,
+      "id":"8",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1000,
+      "id":"9",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1800,
+      "id":"10",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-5.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500,
+      "id":"11",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500000,
+      "id":"12",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 17000,
+      "id":"13",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-2.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 18500,
+      "id":"14",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1000,
+      "id":"15",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1800,
+      "id":"16",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-5.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500,
+      "id":"17",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500000,
+      "id":"18",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 17000,
+      "id":"19",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-2.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 18500,
+      "id":"20",
+      "url": "/id",
+      "color": "blue"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1000,
+      "id":"21",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1800,
+      "id":"22",
+      "url": "/id",
+      "color": "red"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-5.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500,
+      "id":"23",
+      "url": "/id",
+      "color": "white"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt blue",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1500000,
+      "id":"24",
+      "url": "/id",
+      "color": "blue"
+    }
+  ],
+  "login": {
+    "name": "test",
+    "role": "user",
+    "token": "11111"
+  }
+}

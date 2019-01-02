@@ -1,0 +1,158 @@
+.banner_area {
+  color: #ffffff;
+  text-align: center;
+  .img {
+    max-height: 580px;
+    align-items: center;
+    background-image: url('/img/banners/banner-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 580px;
+    display: flex;
+    justify-content: center;
+    .text-block {
+      padding: 30px 0;
+      h3 {
+        margin-top: 0;
+        font-size: 60px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .button-banner {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-transform: none;
+        background: #ffffff;
+        border-radius: 5px;
+        margin-top: 45px;
+        padding: 0 35px;
+        line-height: 50px;
+        &:hover {
+          background: $baseColor;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+
+
+.top_menu {
+  background: #fff;
+  height: 40px;
+  line-height: 16px;
+  .float-left {
+    p {
+      line-height: 40px;
+      color: $pfont;
+      font-size: 12px;
+      font-family: $rob;
+      font-weight: normal;
+      margin: 0px;
+      text-transform: uppercase;
+    }
+  }
+  .right_side {
+    margin-bottom: 0px;
+    padding: 12px 0;
+    li {
+      display: inline-block;
+      &:last-child {
+        a {
+          padding-right: 0px;
+          border-right: 0px;
+        }
+      }
+      a {
+        font-size: 12px;
+        color: $pfont;
+        display: inline-block;
+        border-right: 1px solid rgba(175, 175, 175, 0.30);
+        @include transition;
+        text-transform: uppercase;
+        padding: 0px 19px;
+      }
+      &:hover {
+        a {
+          color: $baseColor;
+        }
+      }
+    }
+  }
+  .ac_btn {
+    line-height: 28px;
+    border: 1px solid #eeeeee;
+    display: inline-block;
+    background: #f9f9ff;
+    padding: 0px 19px;
+    font-size: 12px;
+    font-family: $rob;
+    font-weight: 500;
+    color: $pfont;
+    @include transition;
+    margin-right: 1px;
+    margin-top: 8px;
+    &:hover {
+      background: $baseColor;
+      color: #fff;
+       border-color: $baseColor;
+    }
+  }
+  .dn_btn {
+    line-height: 28px;
+    border: 1px solid $baseColor;
+    display: inline-block;
+    background: $baseColor;
+    padding: 0px 19px;
+    font-size: 12px;
+    font-family: $rob;
+    font-weight: 500;
+    color: #fff;
+    @include transition;
+    margin-top: 8px;
+    border-radius: 3px;
+    &:hover {
+      background: transparent;
+      color: $dip;
+       border-color: $baseColor;
+    }
+  }
+  .lan_pack {
+    height: 30px;
+    border: 1px solid #eeeeee;
+    border-radius: 3px;
+    line-height: 28px;
+    font-size: 12px;
+    font-family: $rob;
+    font-weight: 500;
+    padding-left: 19px;
+    padding-right: 36px;
+    color: $pfont;
+    background: #f9f9ff;
+    margin-right: 5px;
+    margin-top: 8px;
+    .current {
+      color: $pfont;
+    }
+    &:after {
+      content: "\f0d7";
+      border: none !important;
+      font: normal normal normal 12px/1 FontAwesome;
+      transform: rotate(0deg);
+      height: auto;
+      margin-top: -6px;
+      right: 20px;
+    }
+  }
+}
+
+.d-flex {
+  display: flex;
+}

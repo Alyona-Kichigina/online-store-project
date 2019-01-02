@@ -1,0 +1,273 @@
+$rob: 'Roboto', sans-serif;
+$pop: 'Poppins', sans-serif;
+
+$baseColor: rgb(22, 65, 255);
+$dip: rgb(34, 34, 34);
+$pfont: rgb(119, 119, 119);
+$white: #fff;
+
+@mixin transition($property: all,
+$duration: 300ms,
+$animate: linear,
+$delay:0s) {
+  transition: $property $duration $animate $delay;
+}
+
+@mixin transform($transform) {
+  transform: $transform;
+}
+
+@mixin placeholder {
+  &.placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &::-webkit-input-placeholder {
+    @content;
+  }
+}
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+
+}
+p {
+  line-height: 24px;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  @media (min-width: 576px) {
+    max-width: 540px;
+  }
+  @media (min-width: 768px) {
+    max-width: 720px;
+  }
+  @media (min-width: 992px) {
+    max-width: 960px;
+  }
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.d-flex {
+  display: flex;
+
+}
+
+.j-c-space-between {
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  &:hover, &:active, &:focus {
+    // сolor: $baseColor;
+  }
+}
+
+//button
+
+button {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  outline: none;
+  white-space: nowrap;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+.button-blue {
+  background: hsl(228.9, 100%, 54.3%);
+  border: 1px solid hsl(228.9, 100%, 54.3%);
+  color: $white;
+  transition: all 300ms linear 0s;
+  line-height: 48px;
+  &:hover {
+    background: $white;
+    color: hsl(228.9, 100%, 54.3%);
+  }
+}
+
+.button-white {
+  line-height: 38px;
+  background: hsl(240, 100%, 98.8%);
+  border: 1px solid hsl(0, 0%, 93.3%);
+  border-radius: 3px;
+  padding: 0 40px;
+  display: inline-block;
+  color: hsl(0, 0%, 13.3%);
+  text-transform: uppercase;
+  &:hover {
+    color: hsl(228.9, 100%, 54.3%);
+  }
+}
+
+.button-icon {
+  border-radius: 3px;
+}
+
+.border-radius-button {
+  padding: 0 38px;
+  text-transform: uppercase;
+  border-radius: 5px!important;
+  line-height: 38px;
+}
+
+.button-icon-list-product {
+  height: 40px;
+  width: 40px;
+  background: hsl(0, 0%, 100%);
+  line-height: 40px;
+  color: hsl(0, 0%, 13.3%);
+  margin-right: 5px;
+  &:hover {
+    color: hsl(0, 0%, 100%);
+    background: hsl(228.9, 100%, 54.3%);
+  }
+}
+
+.button-icon-product {
+  background: hsl(240, 100%, 98.8%);
+  color: hsl(0, 0%, 13.3%);
+  padding: 0 13px;
+  line-height: 40px;
+  &:hover {
+    background: hsl(0, 0%, 100%);
+    box-shadow: -14.142px 14.142px 20px 0px hsla(0, 0%, 0%, 0.1);
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+
+.fade-enter-active, .fade-leave-active{
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to{
+  opacity: 0;
+}
+
+form {
+  .form-item {
+    margin-bottom: 10px;
+    .error {
+      display: none;
+    }
+
+    &.has-success {
+      input {
+        border-color: green;
+      }
+      .form-control-feedback {
+        color: green;
+      }
+    }
+    &.errorInput {
+      input, textarea {
+        border-color: red;
+      }
+      .error {
+        color: red;
+        display: block;
+      }
+    }
+  }
+}
+
+input {
+  font-size: 13px;
+  line-height: 26px;
+  color: hsl(0, 0%, 60%);
+  border: 1px solid;
+  border-color: hsl(0, 0%, 93.3%);
+  padding-left: 20px;
+  resize: none;
+  height: calc(2.25rem + 2px);
+  display: block;
+  box-shadow: none;
+}
+
+
+.table-product {
+  display: block;
+  overflow-x: auto;
+  table {
+    width: 100%;
+    tr {
+      td {
+        padding: 14px 65px;
+        font-size: 14px;
+        color: hsl(0, 0%, 46.7%);
+        border-top: 1px solid hsl(210, 13.8%, 88.6%);
+      }
+      &:first-child {
+        td {
+          border-top: 0;
+        }
+      }
+    }
+  }
+}
+
+
+.login-block {
+  // background-image: url("../../static/img/login.jpg");
+  background-position: center;
+  background-size: cover;
+  max-width: 480px;
+  max-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .content {
+    text-align: center;
+    padding: 10px;
+    justify-content: center;
+    color: hsl(0, 0%, 100%);
+    .title {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 500;
+    }
+    p {
+      max-width: 380px;
+      margin: 0 auto 25px;
+    }
+  }
+}
+
+
