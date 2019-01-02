@@ -3,16 +3,9 @@
     <div class="d-grid-wrapper product-list-block">
       <div class="filter-left">
         <div>
-          <input type="text" @change="handleChangePrice" v-model="price">
-          <button @click="dispatchFilterProducts">search</button>
-        </div>
-        <br>
-        <div>
           <input type="text" @change="handleChangePriceName" v-model="name">
           <button @click="dispatchFilterProductsName">search</button>
         </div>
-        <br>
-        
         <div class="pl-5">
           {{ filters.colors }}
           <input type="checkbox" id="white" name="feature"
@@ -120,7 +113,6 @@ export default {
   },
   data: function () {
     return {
-      price: 0,
       name: '',
       checkedNames: [],
       selected: '8',
@@ -192,24 +184,15 @@ export default {
     }
   },
   methods: {
-    // value input фильтра цены товара
-    handleChangePrice ({ target: { value } }) {
-      this.price = value
-    },
     // value input фильтра текста товара
     handleChangePriceName ({ target: { value } }) {
       this.name = value
     },
     // вызов мутаций vuex
     ...mapMutations([
-      'filterProductsByPrice',
       'filterProductsByTitle',
       'filterProductsByColor'
     ]),
-    // кнопка фильтра цены
-    dispatchFilterProducts () {
-      this.filterProductsByPrice(this.price)
-    },
     // кнопка фильтра текста товара
     dispatchFilterProductsName () {
       this.filterProductsByTitle(this.name)
@@ -241,9 +224,6 @@ export default {
     },
     'filters.priceRange': function () {
       this.fetchProducts()
-    },
-    price (newValue) {
-      this.fetchProducts({ price: newValue })
     },
     name (newValue) {
       this.fetchProducts({ name: newValue })

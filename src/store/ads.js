@@ -12,10 +12,6 @@ export default {
       state.listOfProducts = payload
       state.listOfProductsResource = payload
     },
-    // фильтр по цене
-    filterProductsByPrice (state, payload) {
-      state.listOfProducts = state.listOfProductsResource.filter(product => product.price > payload * 100)
-    },
     // фильтр по названию
     filterProductsByTitle (state, payload) {
       if (payload.length !== 0) {
