@@ -23,7 +23,8 @@
       "price": 17000,
       "id":"1",
       "url": "/id",
-      "color": "red"
+      "color": "red",
+      "category": "jeans"
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
@@ -48,7 +49,8 @@
       "price": 18500,
       "id":"2",
       "url": "/id",
-      "color": "blue"
+      "color": "blue",
+      "category": "skirts"
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
@@ -73,7 +75,8 @@
       "price": 1000,
       "id":"3",
       "url": "/id",
-      "color": "white"
+      "color": "white",
+      "category": "blouses"
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
@@ -98,7 +101,8 @@
       "price": 1800,
       "id":"4",
       "url": "/id",
-      "color": "red"
+      "color": "red",
+      "category": "sweaters"
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
@@ -123,11 +127,12 @@
       "price": 1500,
       "id":"5",
       "url": "/id",
-      "color": "white"
+      "color": "white",
+      "category": "vests"
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Long Sleeve TShirt red",
       "imgSlider": [
         {
           "id": "1",
@@ -145,14 +150,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1500000,
+      "price": 17000,
       "id":"6",
       "url": "/id",
-      "color": "blue"
+      "color": "red",
+      "category": "jeans"
     },
     {
-      "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "img": "/img/product/feature-product/f-p-2.jpg",
+      "name": "Long Sleeve TShirt blue",
       "imgSlider": [
         {
           "id": "1",
@@ -170,14 +176,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 17000,
+      "price": 18500,
       "id":"7",
       "url": "/id",
-      "color": "red"
+      "color": "blue",
+      "category": "skirts"
     },
     {
-      "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
       "imgSlider": [
         {
           "id": "1",
@@ -195,14 +202,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 18500,
+      "price": 1000,
       "id":"8",
       "url": "/id",
-      "color": "blue"
+      "color": "white",
+      "category": "blouses"
     },
     {
-      "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
       "imgSlider": [
         {
           "id": "1",
@@ -220,14 +228,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1000,
+      "price": 1800,
       "id":"9",
       "url": "/id",
-      "color": "white"
+      "color": "red",
+      "category": "sweaters"
     },
     {
-      "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "img": "/img/product/feature-product/f-p-5.jpg",
+      "name": "Long Sleeve TShirt white",
       "imgSlider": [
         {
           "id": "1",
@@ -245,14 +254,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1800,
+      "price": 1500,
       "id":"10",
       "url": "/id",
-      "color": "red"
+      "color": "white",
+      "category": "vests"
     },
     {
-      "img": "/img/product/feature-product/f-p-5.jpg",
-      "name": "Long Sleeve TShirt white",
+      "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
       "imgSlider": [
         {
           "id": "1",
@@ -270,13 +280,14 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1500,
+      "price": 17000,
       "id":"11",
       "url": "/id",
-      "color": "white"
+      "color": "red",
+      "category": "jeans"
     },
     {
-      "img": "/img/product/feature-product/f-p-1.jpg",
+      "img": "/img/product/feature-product/f-p-2.jpg",
       "name": "Long Sleeve TShirt blue",
       "imgSlider": [
         {
@@ -295,14 +306,15 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1500000,
+      "price": 18500,
       "id":"12",
       "url": "/id",
-      "color": "blue"
+      "color": "blue",
+      "category": "skirts"
     },
     {
-      "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
       "imgSlider": [
         {
           "id": "1",
@@ -320,60 +332,11 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 17000,
+      "price": 1000,
       "id":"13",
       "url": "/id",
-      "color": "red"
-    },
-    {
-      "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
-      "imgSlider": [
-        {
-          "id": "1",
-          "image": "/img/product/single-product/s-product-1.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-1.png"
-        },
-        {
-          "id": "2",
-          "image": "/img/product/single-product/s-product-2.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-2.png"
-        },
-        {
-          "id": "3",
-          "image": "/img/product/single-product/s-product-3.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-3.png"
-        }
-      ],
-      "price": 18500,
-      "id":"14",
-      "url": "/id",
-      "color": "blue"
-    },
-    {
-      "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
-      "imgSlider": [
-        {
-          "id": "1",
-          "image": "/img/product/single-product/s-product-1.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-1.png"
-        },
-        {
-          "id": "2",
-          "image": "/img/product/single-product/s-product-2.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-2.png"
-        },
-        {
-          "id": "3",
-          "image": "/img/product/single-product/s-product-3.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-3.png"
-        }
-      ],
-      "price": 1000,
-      "id":"15",
-      "url": "/id",
-      "color": "white"
+      "color": "white",
+      "category": "blouses"
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
@@ -396,9 +359,10 @@
         }
       ],
       "price": 1800,
-      "id":"16",
+      "id":"14",
       "url": "/id",
-      "color": "red"
+      "color": "red",
+      "category": "sweaters"
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
@@ -421,34 +385,10 @@
         }
       ],
       "price": 1500,
-      "id":"17",
+      "id":"15",
       "url": "/id",
-      "color": "white"
-    },
-    {
-      "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt blue",
-      "imgSlider": [
-        {
-          "id": "1",
-          "image": "/img/product/single-product/s-product-1.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-1.png"
-        },
-        {
-          "id": "2",
-          "image": "/img/product/single-product/s-product-2.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-2.png"
-        },
-        {
-          "id": "3",
-          "image": "/img/product/single-product/s-product-3.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-3.png"
-        }
-      ],
-      "price": 1500000,
-      "id":"18",
-      "url": "/id",
-      "color": "blue"
+      "color": "white",
+      "category": "vests"
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
@@ -471,9 +411,10 @@
         }
       ],
       "price": 17000,
-      "id":"19",
+      "id":"16",
       "url": "/id",
-      "color": "red"
+      "color": "red",
+      "category": "jeans"
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
@@ -496,9 +437,10 @@
         }
       ],
       "price": 18500,
-      "id":"20",
+      "id":"17",
       "url": "/id",
-      "color": "blue"
+      "color": "blue",
+      "category": "skirts"
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
@@ -521,9 +463,10 @@
         }
       ],
       "price": 1000,
-      "id":"21",
+      "id":"18",
       "url": "/id",
-      "color": "white"
+      "color": "white",
+      "category": "blouses"
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
@@ -546,9 +489,10 @@
         }
       ],
       "price": 1800,
-      "id":"22",
+      "id":"19",
       "url": "/id",
-      "color": "red"
+      "color": "red",
+      "category": "sweaters"
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
@@ -571,12 +515,39 @@
         }
       ],
       "price": 1500,
-      "id":"23",
+      "id":"20",
       "url": "/id",
-      "color": "white"
+      "color": "white",
+      "category": "vests"
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
+      "name": "Long Sleeve TShirt red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 17000,
+      "id":"21",
+      "url": "/id",
+      "color": "red",
+      "category": "jeans"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-2.jpg",
       "name": "Long Sleeve TShirt blue",
       "imgSlider": [
         {
@@ -595,15 +566,69 @@
           "previewImage": "/img/product/single-product/s-product-min-3.png"
         }
       ],
-      "price": 1500000,
+      "price": 18500,
+      "id":"22",
+      "url": "/id",
+      "color": "blue",
+      "category": "skirts"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-3.jpg",
+      "name": "Long Sleeve TShirt white",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "23",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1000,
+      "id":"23",
+      "url": "/id",
+      "color": "white",
+      "category": "blouses"
+    },
+    {
+      "img": "/img/product/feature-product/f-p-4.jpg",
+      "name": "Long Sleeve Vue red",
+      "imgSlider": [
+        {
+          "id": "1",
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
+        },
+        {
+          "id": "2",
+          "image": "/img/product/single-product/s-product-2.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-2.png"
+        },
+        {
+          "id": "3",
+          "image": "/img/product/single-product/s-product-3.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-3.png"
+        }
+      ],
+      "price": 1800,
       "id":"24",
       "url": "/id",
-      "color": "blue"
+      "color": "red",
+      "category": "sweaters"
     }
   ],
-  "login": {
-    "name": "test",
+  "login": [{
+    "Login": "user",
+    "password": "1",
     "role": "user",
     "token": "11111"
-  }
+  }]
 }

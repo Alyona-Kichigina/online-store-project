@@ -1,12 +1,57 @@
 .d-grid-wrapper {
   display: grid;
   grid-template-columns: 25% 75%;
+  .filter-left {
+    padding-right: 30px;
+    .filter-block {
+      margin-bottom: 30px;
+      background-color: white;
+      box-shadow: 0px 10px 10px 0px rgba(153, 153, 153, 0.1);
+      .filter-title {
+        background: #f9f9ff;
+        padding-left: 30px;
+        font-size: 14px;
+        color: #222222;
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 60px;
+      }
+      .filter-list {
+        padding: 15px 30px;
+        .filter-item {
+          margin-bottom: 13px;
+          a {
+            color: #222222;
+            font-size: 14px;
+          }
+        }
+      }
+      .filter-list-wrapper {
+        border-bottom: 1px solid #eeeeee;
+        padding: 15px 30px;
+        &:last-child {
+          border-bottom: none;
+        }
+        .title {
+          color: #222222;
+          font-size: 14px;
+          margin-bottom: 22px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
 }
-.wrapper-products .product-block{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 30px;
-  grid-row-gap: 50px;
+.wrapper-products {
+  .message-no-products {
+    border: 1px solid $baseColor;
+    display: block;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    max-width: 720px;
+    margin: 0 auto;
+  }
 }
 .pagination {
 

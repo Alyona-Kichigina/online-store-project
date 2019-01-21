@@ -53,7 +53,6 @@
       line-height: 40px;
       color: $pfont;
       font-size: 12px;
-      font-family: $rob;
       font-weight: normal;
       margin: 0px;
       text-transform: uppercase;
@@ -93,7 +92,6 @@
     background: #f9f9ff;
     padding: 0px 19px;
     font-size: 12px;
-    font-family: $rob;
     font-weight: 500;
     color: $pfont;
     @include transition;
@@ -112,7 +110,6 @@
     background: $baseColor;
     padding: 0px 19px;
     font-size: 12px;
-    font-family: $rob;
     font-weight: 500;
     color: #fff;
     @include transition;
@@ -130,7 +127,6 @@
     border-radius: 3px;
     line-height: 28px;
     font-size: 12px;
-    font-family: $rob;
     font-weight: 500;
     padding-left: 19px;
     padding-right: 36px;

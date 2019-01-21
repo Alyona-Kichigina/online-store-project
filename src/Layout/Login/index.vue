@@ -1,6 +1,9 @@
 <template>
   <div class="login-wrapper">
     <form action="" class="form-container">
+      <div style="color: red">
+        {{ authErrors }}
+      </div>
       <Input
         label="Login"
         id="login"
@@ -34,35 +37,53 @@ export default {
   name: 'index',
   data () {
     return {
-     formPayload: {
-       login: undefined,
-       password: undefined
-     },
+      formPayload: {
+        login: undefined,
+        password: undefined
+      },
       // объект ошибки валлидации
       validationErrors: {},
+      // не выводим ошибку
       submitFailed: false
-    }
-  },
-  methods: {
-    handleSubmit () {
-      const rules = {
-        login: 'required',
-        password: 'required'
-      }
-      getValidation(this.formPayload, rules, { onFail: this.handleSubmitFail, onSuccess: this.submitForm })
-    },
-    handleSubmitFail (e) {
-      this.submitFailed = true
-      this.validationErrors = e
-    },
-    submitForm () {
-      this.submitFailed = false
-      this.validationErrors = {}
-      this.$store.dispatch(LOGIN, this.formPayload)
     }
   },
   components: {
     Input
+  },
+  methods: {
+    // при нажатии на кнопку
+    handleSubmit () {
+      // обязательные поля для заполнения
+      const rules = {
+        login: 'required',
+        password: 'required'
+      }
+      // вызываем проверку валидации
+      getValidation(this.formPayload, rules, { onFail: this.handleSubmitFail, onSuccess: this.submitForm })
+    },
+    // функция при ошибке валидации
+    handleSubmitFail (e) {
+      // выводим ошибку
+      this.submitFailed = true
+      // выводим текст ошибки
+      this.validationErrors = e
+    },
+    // функция если валидация прошла успешно
+    submitForm () {
+      // не выводим ошибку
+      this.submitFailed = false
+      // очищаем объект ошибки
+      this.validationErrors = {}
+      // вызываем функцию в vuex делая запрос на бд
+      this.$store.dispatch(LOGIN, this.formPayload)
+    }
+  },
+  // срабатывает при изменениях
+  computed: {
+    authErrors () {
+      // выводим ощибку что неправильно заполнены поля ввода, вызвав объект authState.error
+      return this.$store.getters.authState.error
+    }
   }
 }
 </script>
@@ -79,7 +100,7 @@ export default {
         display: flex;
         justify-content: flex-end;
         .submit-button {
-      
+
         }
       }
     }

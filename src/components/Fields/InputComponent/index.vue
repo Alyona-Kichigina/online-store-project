@@ -1,4 +1,5 @@
 <template>
+  <!--компонент который показывает ошибку-->
   <InputWrapper
     :label="label"
     :id="id"

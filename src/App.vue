@@ -13,10 +13,14 @@
 import Header from './views/layout/components/header'
 import Footer from './views/layout/components/footer'
 import Login from './Layout/Login'
+import { INIT_AUTH } from './store/modules/auth'
 export default {
+  mounted () {
+    this.$store.dispatch(INIT_AUTH)
+  },
   computed: {
     token () {
-      return this.$store.getters.token
+      return this.$store.getters.authState.token
     }
   },
   components: {

@@ -8,10 +8,12 @@
     :touched="touched"
   >
     <input
-      :class="submitFailed ? 'has-error' : ''"
+      type="checkbox"
+      :class="submitFailed && 'has-error'"
       :id="id"
+      :checked="checked"
       :placeholder="placeholder"
-      :value="value"
+      :value="checkBoxValue"
       @input="handleInput"
       @blur="handleBlur"
     />
@@ -20,26 +22,31 @@
 <script>
 import InputWrapper from '../InputWrapper.vue'
 import InputMixin from '@/mixins/InputMixin.js'
-
 export default {
   name: 'input-doc',
   mixins: [InputMixin],
-  data () {
-    return {
-      isValidRegNumber: true,
-      validClass: ''
+  computed: {
+    checked () {
+      const { checkBoxValue, value = [] } = this
+      return checkBoxValue ? value.includes(checkBoxValue) : value
     }
   },
   methods: {
-    handleInput (value) {
-      this.$emit('input', value)
+    handleArrayModel () {
+      const { checkBoxValue, value = [] } = this
+      return value.includes(checkBoxValue)
+        ? value.filter(item => item !== checkBoxValue)
+        : [...value, checkBoxValue]
+    },
+    handleInput () {
+      const data = this.checkBoxValue ? this.handleArrayModel() : !this.value
+
+      this.$emit('input', data)
     }
   },
   props: {
-    options: {
-      type: Array,
-      required: true
-    }
+    value: [Array, Boolean],
+    checkBoxValue: String
   },
   components: {
     InputWrapper

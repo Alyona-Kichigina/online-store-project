@@ -6,14 +6,14 @@ export default {
     user: null
   },
   mutations: {
-    setLetter (state, payload) {
+    setAuthState (state, payload) {
       state.user = payload
     }
   },
   actions: {
     async sendingLetter ({commit}) {
       const { data } = await axios.post(PRODUCTS_URL_LETTERS)
-      commit('setLetter', data)
+      commit('setAuthState', data)
     }
   },
   getters: {

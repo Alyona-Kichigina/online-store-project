@@ -1,3 +1,4 @@
+// функция для того чтобы нельзя было бесконечно выполнять событие
 export const debounce = (fn, time) => {
   let timeout
 

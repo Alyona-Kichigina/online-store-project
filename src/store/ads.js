@@ -5,9 +5,16 @@ export default {
   state: {
     listOfProducts: [],
     // массив для резервного копирования
-    listOfProductsResource: []
+    listOfProductsResource: [],
+    page: 1,
+    loading: false
   },
   mutations: {
+    // saveInStoreProducts (state, { data, page}) {
+    //   state.listOfProducts = data
+    //   state.listOfProductsResource = data
+    //   state.page = page
+    // },
     saveInStoreProducts (state, payload) {
       state.listOfProducts = payload
       state.listOfProductsResource = payload
@@ -35,13 +42,14 @@ export default {
     // выводим товар по id
     saveInStoreProductPage (state, payload) {
       state.listOfProducts = payload
+    },
+    startFetchProducts (state) {
+      state.loading = true
     }
   },
   actions: {
     async fetchProducts ({ commit }, { page = 1, quantity = 8, filters = {} } = {}) {
       try {
-        // responce => responce.data
-        // const { data } = await axios.get(PRODUCTS_URL)
         let filtersStr = ''
         Object.entries(filters).forEach((item) => {
           switch (item[0]) {
@@ -53,9 +61,13 @@ export default {
               break
           }
         })
+        commit('startFetchProducts')
         const { data } = await axios.get(`${PRODUCTS_URL}?_page=${page}&_limit=${quantity}${filtersStr}`)
         // присваиваем данные с сервера в listOfProducts
         commit('saveInStoreProducts', data)
+        // if (data.length > 0) {
+        //   commit('saveInStoreProducts',{data, page})
+        // }
       } catch (e) {
         console.log(e)
       }
