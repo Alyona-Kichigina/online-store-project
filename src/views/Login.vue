@@ -84,30 +84,30 @@
 </template>
 
 <script>
-  import { required, email, minLength, sameAs } from 'vuelidate/lib/validators'
-  export default {
-    data () {
-      return {
-        email: '',
-        password: '',
-        repeatPassword: '',
-        submitStatus: null
-      }
+import { required, email, minLength, sameAs } from 'vuelidate/lib/validators'
+export default {
+  data () {
+    return {
+      email: '',
+      password: '',
+      repeatPassword: '',
+      submitStatus: null
+    }
+  },
+  validations: {
+    email: {
+      required,
+      email
     },
-    validations: {
-      email: {
-        required,
-        email
-      },
-      password: {
-        required,
-        minLength: minLength(6)
-      },
-      repeatPassword: {
-        sameAsPassword: sameAs('password')
-      }
+    password: {
+      required,
+      minLength: minLength(6)
+    },
+    repeatPassword: {
+      sameAsPassword: sameAs('password')
     }
   }
+}
 </script>
 
 <style scoped>

@@ -14,16 +14,16 @@ export default new Router({
       name: 'shop',
       component: () => import('./views/Shop')
     },
-    {
-      path: '/login',
-      name: 'login',
-      component: () => import('./views/Login')
-    },
-    {
-      path: '/registration',
-      name: 'registration',
-      component: () => import('./views/Registration')
-    },
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: () => import('./views/Login')
+    // },
+    // {
+    //   path: '/registration',
+    //   name: 'registration',
+    //   component: () => import('./views/Registration')
+    // },
     {
       path: '/newPage',
       name: 'newPage',
@@ -44,6 +44,11 @@ export default new Router({
       name: 'ProductPage',
       component: () => import('./views/ProductPage.vue'),
       props: true
+    },
+    {
+      path: '/personal-area',
+      name: 'PersonalArea',
+      component: () => import('./views/PersonalArea.vue')
     }
   ],
   mode: 'history'

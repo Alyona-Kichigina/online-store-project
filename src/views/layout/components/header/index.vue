@@ -65,9 +65,13 @@
             <button class="icons">
               <i class="fa fa-search" aria-hidden="true"></i>
             </button>
-            <button class="icons">
-              <i class="fa fa-user" aria-hidden="true"></i>
-            </button>
+            <router-link
+              :to="{ name: 'PersonalArea' }"
+            >
+              <button class="icons">
+                <i class="fa fa-user" aria-hidden="true"></i>
+              </button>
+            </router-link>
             <button class="icons">
               <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
