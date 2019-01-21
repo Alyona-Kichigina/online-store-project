@@ -103,14 +103,11 @@ export default {
         { title: 'Pages',
           url: '/pages',
           children: [
-            { title: 'Login', url: '/login' },
             { title: 'Tracking', url: '/tracking' },
             { title: 'Elements', url: '/elements' },
             { title: 'newPage', url: '/newPage' }
           ]
-        },
-        { title: 'Login', url: '/login' },
-        { title: 'Registration', url: '/registration' }
+        }
       ]
     }
   }

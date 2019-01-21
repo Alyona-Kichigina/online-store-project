@@ -14,16 +14,6 @@ export default new Router({
       name: 'shop',
       component: () => import('./views/Shop')
     },
-    // {
-    //   path: '/login',
-    //   name: 'login',
-    //   component: () => import('./views/Login')
-    // },
-    // {
-    //   path: '/registration',
-    //   name: 'registration',
-    //   component: () => import('./views/Registration')
-    // },
     {
       path: '/newPage',
       name: 'newPage',
