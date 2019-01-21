@@ -11,7 +11,7 @@
         background: #f9f9ff;
         padding-left: 30px;
         font-size: 14px;
-        color: #222222;
+        color: $dip;
         text-transform: uppercase;
         font-weight: 500;
         line-height: 60px;
@@ -21,7 +21,7 @@
         .filter-item {
           margin-bottom: 13px;
           a {
-            color: #222222;
+            color: $dip;
             font-size: 14px;
           }
         }
@@ -33,7 +33,7 @@
           border-bottom: none;
         }
         .title {
-          color: #222222;
+          color: $dip;
           font-size: 14px;
           margin-bottom: 22px;
           margin-top: 10px;

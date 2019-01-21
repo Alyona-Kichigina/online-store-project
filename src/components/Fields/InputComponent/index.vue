@@ -41,6 +41,9 @@ export default {
 }
 </script>
 <style lang="scss">
+  input {
+  
+  }
   .has-error {
     .el-input__inner{
       border-color: #fc4b6c;

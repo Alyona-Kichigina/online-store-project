@@ -34,7 +34,7 @@ export default {
   .input-container {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
   }
   .input-wrapper {
     position: relative;

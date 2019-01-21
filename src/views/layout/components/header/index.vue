@@ -75,9 +75,13 @@
             <button class="icons">
               <i class="fa fa-heart-o" aria-hidden="true"></i>
             </button>
-            <button class="icons">
-              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-            </button>
+            <router-link
+              :to="{ name: 'Cart' }"
+            >
+              <button class="icons">
+                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+              </button>
+            </router-link>
           </div>
         </div>
       </div>

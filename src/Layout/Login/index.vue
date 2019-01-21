@@ -1,22 +1,23 @@
 <template>
   <div class="login-wrapper">
+    <div class="title">Log in to enter</div>
     <form action="" class="form-container">
       <div style="color: red">
         {{ authErrors }}
       </div>
       <Input
-        label="Login"
         id="login"
         v-model="formPayload.login"
         :validationErrors="validationErrors.login"
         :submitFailed="submitFailed"
+        placeholder="Login"
       />
       <Input
-        label="Password"
         id="password"
         v-model="formPayload.password"
         :validationErrors="validationErrors.password"
         :submitFailed="submitFailed"
+        placeholder="Password"
       />
       <div class="button-wrapper">
         <button
@@ -88,21 +89,4 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-  .login-wrapper {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    .form-container {
-      margin: auto;
-      padding: 32px;
-      .button-wrapper {
-        display: flex;
-        justify-content: flex-end;
-        .submit-button {
-
-        }
-      }
-    }
-  }
-</style>
+<style scoped lang="scss" src="./style.scss"></style>

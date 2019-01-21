@@ -1,8 +1,8 @@
 <template>
-	<Login v-if="!token"/>
-	<div v-else>
-		<div class="container">
-			<h1>личный кабинет</h1>
+	<div class="container">
+		<Login v-if="!token"/>
+		<div v-else>
+				<h1>личный кабинет</h1>
 		</div>
 	</div>
 </template>
