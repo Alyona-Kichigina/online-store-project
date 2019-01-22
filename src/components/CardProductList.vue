@@ -13,7 +13,9 @@
           <button class="button-icon-list-product button-icon">
             <i aria-hidden="true" class="fa fa-heart-o"></i>
           </button>
-          <button class="button-icon-list-product button-icon">
+          <button
+            class="button-icon-list-product button-icon"
+          >
             <i aria-hidden="true" class="fa fa-shopping-cart"></i>
           </button>
         </div>

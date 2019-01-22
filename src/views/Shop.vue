@@ -28,7 +28,11 @@
           </div>
           <div class="pl-5 filter-list-wrapper">
             <div class="title">Color</div>
-            <CheckBox></CheckBox>
+            <CheckBox
+              v-for="item in checkboxColor"
+              :id="item.title"
+              v-model="filters.colors"
+            >{{ item.title }}</CheckBox>
             {{ filters.colors }}
             <input type="checkbox" id="white" name="feature"
                    value="white"
@@ -67,7 +71,7 @@
           </select>
           <!--<Select :options="options" v-model="selected" placeholder="placeholder" @tag="SelectFunction"/>-->
         </div>
-        <CardProductList :productsArray="products"/>
+        <CardProductList :productsArray="products" />
         <div class="message-no-products" v-if="this.products.length === 0">
           Sorry, but you have already yet saw all our products in this category.
         </div>
@@ -133,7 +137,7 @@ import { debounce } from '../utils/debounce'
 import { mapMutations } from 'vuex'
 import vueSlider from 'vue-slider-component'
 import paginationButton from '../components/paginationButton'
-import CheckBox from '../components/Fields/CheckboxComponent'
+import CheckBox from '../components/CheckBox'
 import CardProductList from '../components/CardProductList'
 import Select from '../components/Select'
 
@@ -203,14 +207,13 @@ export default {
         { title: 'Sweaters', id: 'sweaters' },
         { title: 'Vests', id: 'vests' }
       ],
-      categoryName: ''
+      categoryName: '',
+      idProduct: ''
     }
   },
   // выполняетсся при инициализации
   created () {
     this.fetchProducts()
-  },
-  beforeMount () {
   },
   // выполняется после перерисовки страницы
   beforeUpdate () {
@@ -240,6 +243,7 @@ export default {
     dispatchFilterProductsName () {
       this.filterProductsByTitle(this.name)
     },
+    // фильтр по категориям товара
     dispatchFilterProductsCategory () {
       console.log(this.categories.id)
     },
@@ -255,7 +259,7 @@ export default {
     // пагинация
     changePage ({ target: { value } }) {
       this.page = value
-    }
+    },
   },
   // эта функция запускается при любом изменении на странице
   watch: {

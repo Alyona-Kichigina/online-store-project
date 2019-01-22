@@ -10,11 +10,6 @@ export default {
     loading: false
   },
   mutations: {
-    // saveInStoreProducts (state, { data, page}) {
-    //   state.listOfProducts = data
-    //   state.listOfProductsResource = data
-    //   state.page = page
-    // },
     saveInStoreProducts (state, payload) {
       state.listOfProducts = payload
       state.listOfProductsResource = payload
@@ -38,10 +33,6 @@ export default {
       } else {
         state.listOfProducts = state.listOfProductsResource
       }
-    },
-    // выводим товар по id
-    saveInStoreProductPage (state, payload) {
-      state.listOfProducts = payload
     },
     startFetchProducts (state) {
       state.loading = true
@@ -71,15 +62,6 @@ export default {
       } catch (e) {
         console.log(e)
       }
-    },
-    // выводим товар по id
-    async fetchProductPage ({ commit }) {
-      try {
-        const { data } = await axios.get(`${PRODUCTS_URL}`)
-        commit('saveInStoreProductPage', data)
-      } catch (e) {
-        console.log(e)
-      }
     }
   },
   getters: {
@@ -90,12 +72,6 @@ export default {
     // выодит список продуктов
     productList (state) {
       return state.listOfProducts
-    },
-    // выводит продукт по id
-    productById (state) {
-      return productId => {
-        return state.listOfProducts.find(ad => ad.id === productId)
-      }
     }
   }
 }

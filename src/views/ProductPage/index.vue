@@ -44,9 +44,9 @@
 </template>
 
 <script>
-import SliderProduct from '../components/SliderProduct'
-import CardProduct from '../components/CardProduct'
-import Tab from '../components/Tab'
+import SliderProduct from '../../components/SliderProduct'
+import CardProduct from '../../components/CardProduct'
+import Tab from '../../components/Tab'
 export default {
   name: 'productPage',
   props: ['id'],
@@ -79,4 +79,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../scss/product-page.scss"></style>
+<style lang="scss" src="../../scss/product-page.scss"></style>

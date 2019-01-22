@@ -1,28 +1,56 @@
 <template>
-  <div>
-      <input type="checkbox" :value="value" @change="handleChange">
-      <label>{{title}}</label>
+  <div class="field-container">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      :id="id"
+      :checked="checked"
+      @input="handleInput"
+    />
+    <label class="form-check-label" :for="id">
+      {{ label }}
+    </label>
   </div>
 </template>
-
 <script>
-  export default {
-    name: 'Checkbox',
-    props: ['value', 'title'],
-    methods: {
-      handleChange (e) {
-        this.$emit('input', e.target.checked)
-      }
+export default {
+  name: 'CheckBox',
+  computed: {
+    checked () {
+      const { checkBoxValue, value = [] } = this
+      return checkBoxValue ? value.includes(checkBoxValue) : value
+    }
+  },
+  methods: {
+    handleArrayModel () {
+      const { checkBoxValue, value = [] } = this
+      return value.includes(checkBoxValue)
+        ? value.filter(item => item !== checkBoxValue)
+        : [...value, checkBoxValue]
+    },
+    handleInput () {
+      const data = this.checkBoxValue ?  this.handleArrayModel() : !this.value
+      this.$emit('input', data, this.id)
+    }
+  },
+  props: {
+    id: String,
+    value: {
+      type: [Array, Boolean],
+      default: false
+    },
+    label: {
+      type: String,
+      default: ''
+    },
+    checkBoxValue: String
+  }
+}
+</script>
+<style lang="scss">
+  .has-error {
+    .el-input__inner{
+      border-color: #fc4b6c;
     }
   }
-</script>
-<style scoped>
-  .checkbox input[type="checkbox"] {
-
-  }
-  .checkbox label {
-    color: hsl(0, 0%, 46.7%);
-  }
-
-
 </style>

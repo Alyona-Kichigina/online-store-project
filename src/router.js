@@ -22,7 +22,7 @@ export default new Router({
     {
       path: '/Cart',
       name: 'Cart',
-      component: () => import('./views/Cart')
+      component: () => import('./views/Cart/index.vue')
     },
     {
       path: '/Contact',
@@ -32,7 +32,7 @@ export default new Router({
     {
       path: '/product-page/:id',
       name: 'ProductPage',
-      component: () => import('./views/ProductPage.vue'),
+      component: () => import('./views/ProductPage/index.vue'),
       props: true
     },
     {
