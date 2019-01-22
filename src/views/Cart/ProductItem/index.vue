@@ -1,27 +1,50 @@
 <template>
-	<tr>
-		<td>
-			<div class="media">
-				<img src="../../../../public/img/product/single-product/cart-1.jpg" alt="">
-				<p>Minimalistic shop for multipurpose use</p>
+	<!--<tbody>-->
+	<!--<tr-->
+		<!--v-for="productItem in productsArray"-->
+		<!--:key="productItem.id"-->
+	<!--&gt;-->
+		<!--<td>-->
+			<!--<div class="media">-->
+				<!--<img :src="productItem.img" alt="">-->
+				<!--<p>Minimalistic shop for multipurpose use</p>-->
+			<!--</div>-->
+		<!--</td>-->
+		<!--<td>-->
+			<!--<div class="price">{{ productItem.price }}</div>-->
+		<!--</td>-->
+		<!--<td>-->
+			<!--<div class="product_count">-->
+			<!--</div>-->
+		<!--</td>-->
+		<!--<td>-->
+			<!--<div class="price">$720.00</div>-->
+		<!--</td>-->
+	<!--</tr>-->
+	<!--</tbody>-->
+	<div>
+		<div
+			v-for="productItem in productsArray"
+			:key="productItem.id"
+		
+		>
+			<div>
+				<img :src="productItem.img" alt="">
+				<div class="price">{{ productItem.price }}</div>
 			</div>
-		</td>
-		<td>
-			<div class="price">$360.00</div>
-		</td>
-		<td>
-			<div class="product_count">
-			</div>
-		</td>
-		<td>
-			<div class="price">$720.00</div>
-		</td>
-	</tr>
+		</div>
+	</div>
 </template>
 
 <script>
 	export default {
-		name: 'ProductItem'
+		name: 'ProductItem',
+		props: {
+			productsArray: {
+				type: Object,
+				require: true
+			}
+		}
 	}
 </script>
 

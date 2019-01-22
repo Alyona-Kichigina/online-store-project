@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { PRODUCTS_URL } from '@/config'
 
-export default  {
+export default {
 	state: {
 		listOfProducts: []
 	},

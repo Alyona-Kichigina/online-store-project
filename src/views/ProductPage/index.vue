@@ -18,7 +18,10 @@
             <input type="number" name="age" id="age" min="0">
           </div>
           <div class="button-group">
-            <button class="border-radius-button button-blue">Add to Cart</button>
+            <button
+              @click="getProductId"
+              class="border-radius-button button-blue"
+            >Add to Cart</button>
             <button class="button-icon-product">
               <i class="fa fa-diamond" aria-hidden="true"></i>
             </button>
@@ -44,9 +47,9 @@
 </template>
 
 <script>
-import SliderProduct from '../../components/SliderProduct'
-import CardProduct from '../../components/CardProduct'
-import Tab from '../../components/Tab'
+import SliderProduct from '@/components/SliderProduct'
+import CardProduct from './CardProduct/CardProduct'
+import Tab from '@/components/Tab'
 export default {
   name: 'productPage',
   props: ['id'],
@@ -57,18 +60,24 @@ export default {
         'Specification',
         'Comments',
         'Reviews'
-      ]
+      ],
+      productId: ''
     }
-  },
-  methods: {
-  },
-  beforeMount () {
-    this.$store.dispatch('fetchProductPage')
   },
   components: {
     SliderProduct,
     CardProduct,
     Tab
+  },
+  methods: {
+    getProductId () {
+      const id = this.id
+      this.productId = this.$route.params.id
+      this.$store.dispatch('fetchProductById', this.productId)
+    }
+  },
+  beforeMount () {
+    this.$store.dispatch('fetchProductPage')
   },
   computed: {
     ad () {
@@ -79,4 +88,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../../scss/product-page.scss"></style>
+<style lang="scss" src="./product-page.scss"></style>

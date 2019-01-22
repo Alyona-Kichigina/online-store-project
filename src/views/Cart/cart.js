@@ -1,28 +1,29 @@
 import axios from 'axios'
-
+import { PRODUCTS_URL } from '@/config'
 
 export default {
 	state: {
-		productListInBasket: []
+		listOfProductById: []
 	},
 	mutations: {
-		saveInStorePeoples (state, payload) {
-			state.listOfPeoples = payload
+		saveProductById (state, payload) {
+			state.listOfProductById = { ...state.listOfProductById, ...payload }
+			console.log(state.listOfProductById)
 		}
 	},
 	actions: {
-		async fetchPeoples ({ commit }) {
+		async fetchProductById ({ commit }, id) {
 			try {
-				const { data } = await axios.get()
-				commit('saveInStorePeoples', data)
+				const { data } = await axios.get(`${PRODUCTS_URL}/${id}`)
+				commit('saveProductById', data)
 			} catch (e) {
 				console.log(e)
 			}
 		}
 	},
 	getters: {
-		peoplesList (state) {
-			return state.listOfPeoples
+		accesslistOfProductById (state) {
+			return state.listOfProductById
 		}
 	}
 }

@@ -94,7 +94,7 @@
 import { mapMutations } from 'vuex'
 import Select from '../components/Select'
 import buttonBlue from '../components/buttonBlue'
-import CardProduct from '../components/CardProduct'
+import CardProduct from './ProductPage/CardProduct/CardProduct'
 import Breadcrumbs from '../components/Breadcrumbs'
 import FormNewsletter from '../components/FormNewsletter'
 import CommentBlock from '../components/CommentBlock'

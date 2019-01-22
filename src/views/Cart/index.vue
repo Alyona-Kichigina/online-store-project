@@ -11,7 +11,24 @@
         </tr>
         </thead>
         <tbody>
-        <ProductItem></ProductItem>
+        <tr>
+        <td>
+        <div class="media">
+        <img src="" alt="">
+        <p>Minimalistic shop for multipurpose use</p>
+        </div>
+        </td>
+        <td>
+        <div class="price"></div>
+        </td>
+        <td>
+        <div class="product_count">
+        </div>
+        </td>
+        <td>
+        <div class="price">$720.00</div>
+        </td>
+        </tr>
         </tbody>
       </table>
       <div class="border-bottom">
@@ -34,6 +51,7 @@
       </div>
 
     </div>
+    <ProductItem :productsArray="productsA"></ProductItem>
   </section>
 </template>
 
@@ -43,6 +61,11 @@ export default {
   name: 'Cart',
   components: {
     ProductItem
+  },
+  computed: {
+    productsA () {
+      return this.$store.getters.accesslistOfProductById
+    }
   }
 }
 </script>

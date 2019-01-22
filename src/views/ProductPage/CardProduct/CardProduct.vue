@@ -16,11 +16,11 @@ export default {
       require: true
     },
     productPrice: {
-      type: String,
+      type: Number,
       require: true
     }
   }
 }
 </script>
 
-<style lang="scss" src="../scss/product-style.scss"></style>
+<style lang="scss" src="./product-style.scss"></style>

@@ -40,4 +40,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../scss/product-style.scss"></style>
+<style lang="scss" src="../views/ProductPage/CardProduct/product-style.scss"></style>

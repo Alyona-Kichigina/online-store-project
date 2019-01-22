@@ -18,7 +18,6 @@ export default {
     }
   },
   render (h) {
-    console.log(this.$slots)
     const tabsHeaders = this.tabTitles.map((header, index) => (
       <div
         onClick={() => this.clickTab(index)}

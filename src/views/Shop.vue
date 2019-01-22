@@ -259,7 +259,7 @@ export default {
     // пагинация
     changePage ({ target: { value } }) {
       this.page = value
-    },
+    }
   },
   // эта функция запускается при любом изменении на странице
   watch: {
