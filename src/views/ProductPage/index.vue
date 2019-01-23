@@ -73,7 +73,7 @@ export default {
     getProductId () {
       const id = this.id
       this.productId = this.$route.params.id
-      this.$store.dispatch('fetchProductById', this.productId)
+      this.$store.commit('saveIdProduct', this.productId)
     }
   },
   beforeMount () {

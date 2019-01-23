@@ -10,26 +10,8 @@
           <th>Total</th>
         </tr>
         </thead>
-        <tbody>
-        <tr>
-        <td>
-        <div class="media">
-        <img src="" alt="">
-        <p>Minimalistic shop for multipurpose use</p>
-        </div>
-        </td>
-        <td>
-        <div class="price"></div>
-        </td>
-        <td>
-        <div class="product_count">
-        </div>
-        </td>
-        <td>
-        <div class="price">$720.00</div>
-        </td>
-        </tr>
-        </tbody>
+        <ProductItem :productsArray="productsA"></ProductItem>
+        {{productsA}}
       </table>
       <div class="border-bottom">
         <div class="cart-button-block">
@@ -49,9 +31,7 @@
             <div>$2160.00</div>
         </div>
       </div>
-
     </div>
-    <ProductItem :productsArray="productsA"></ProductItem>
   </section>
 </template>
 
@@ -64,8 +44,12 @@ export default {
   },
   computed: {
     productsA () {
-      return this.$store.getters.accesslistOfProductById
+      return this.$store.getters.accessListOfProductById
     }
+  },
+  mounted () {
+    return this.$store.dispatch('fetchProductById'),
+      this.$store.dispatch('initIdProduct')
   }
 }
 </script>

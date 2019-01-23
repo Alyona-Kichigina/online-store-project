@@ -1,51 +1,39 @@
 <template>
-	<!--<tbody>-->
-	<!--<tr-->
-		<!--v-for="productItem in productsArray"-->
-		<!--:key="productItem.id"-->
-	<!--&gt;-->
-		<!--<td>-->
-			<!--<div class="media">-->
-				<!--<img :src="productItem.img" alt="">-->
-				<!--<p>Minimalistic shop for multipurpose use</p>-->
-			<!--</div>-->
-		<!--</td>-->
-		<!--<td>-->
-			<!--<div class="price">{{ productItem.price }}</div>-->
-		<!--</td>-->
-		<!--<td>-->
-			<!--<div class="product_count">-->
-			<!--</div>-->
-		<!--</td>-->
-		<!--<td>-->
-			<!--<div class="price">$720.00</div>-->
-		<!--</td>-->
-	<!--</tr>-->
-	<!--</tbody>-->
-	<div>
-		<div
-			v-for="productItem in productsArray"
-			:key="productItem.id"
-		
-		>
-			<div>
+	<tbody>
+	<tr
+		v-for="productItem in productsArray"
+		:key="productItem.id"
+	>
+		<td>
+			<div class="media">
 				<img :src="productItem.img" alt="">
-				<div class="price">{{ productItem.price }}</div>
+				<p>{{ productItem.name }}</p>
 			</div>
-		</div>
-	</div>
+		</td>
+		<td>
+			<div class="price">{{ (productItem.price / 100) .toFixed(2) }}</div>
+		</td>
+		<td>
+			<div class="product_count">
+			</div>
+		</td>
+		<td>
+			<div class="price">$720.00</div>
+		</td>
+	</tr>
+	</tbody>
 </template>
 
 <script>
-	export default {
-		name: 'ProductItem',
-		props: {
-			productsArray: {
-				type: Object,
-				require: true
-			}
-		}
-	}
+export default {
+  name: 'ProductItem',
+  props: {
+    productsArray: {
+      type: Object,
+      require: true
+    }
+  }
+}
 </script>
 
 <style scoped>

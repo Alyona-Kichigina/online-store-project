@@ -207,8 +207,7 @@ export default {
         { title: 'Sweaters', id: 'sweaters' },
         { title: 'Vests', id: 'vests' }
       ],
-      categoryName: '',
-      idProduct: ''
+      categoryName: ''
     }
   },
   // выполняетсся при инициализации
