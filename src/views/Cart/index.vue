@@ -10,8 +10,7 @@
           <th>Total</th>
         </tr>
         </thead>
-        <ProductItem :productsArray="productsA"></ProductItem>
-        {{productsA}}
+        <ProductItem :productsArray="productsA.data"></ProductItem>
       </table>
       <div class="border-bottom">
         <div class="cart-button-block">
@@ -48,8 +47,8 @@ export default {
     }
   },
   mounted () {
-    return this.$store.dispatch('fetchProductById'),
-      this.$store.dispatch('initIdProduct')
+    this.$store.dispatch('fetchProductById')
+    this.$store.dispatch('initIdProduct')
   }
 }
 </script>

@@ -1,19 +1,6 @@
 <template>
   <div class="">
     <div class="container">
-      <!--<h1>newPage</h1>-->
-      <!--<button @click="watchList">watch</button>-->
-      <!--<button @click="deleteListName">delete</button>-->
-      <!--<v-card-->
-      <!--v-for="people of peoples"-->
-      <!--:key="people.id"-->
-      <!--&gt;-->
-      <!--<h4>{{ people.name }}</h4>-->
-      <!--<strong>{{ people.age }}</strong>-->
-      <!--<button :value="people.id" @click="deleteListName">delete</button>-->
-      <!--</v-card>-->
-
-
       <div class="p-b-15">
         <Select>
           <option :optionArray="selectArray" :optionValue="selectArray.value">

@@ -71,7 +71,7 @@
           </select>
           <!--<Select :options="options" v-model="selected" placeholder="placeholder" @tag="SelectFunction"/>-->
         </div>
-        <CardProductList :productsArray="products" />
+        <CardProductList :productsArray="products" :clickFunction="getIdProduct"/>
         <div class="message-no-products" v-if="this.products.length === 0">
           Sorry, but you have already yet saw all our products in this category.
         </div>
@@ -133,13 +133,13 @@
 </template>
 
 <script>
-import { debounce } from '../utils/debounce'
+import { debounce } from '../../utils/debounce'
 import { mapMutations } from 'vuex'
 import vueSlider from 'vue-slider-component'
-import paginationButton from '../components/paginationButton'
-import CheckBox from '../components/CheckBox'
-import CardProductList from '../components/CardProductList'
-import Select from '../components/Select'
+import paginationButton from '../../components/paginationButton'
+import CheckBox from '../../components/CheckBox'
+import CardProductList from './ProductList/index'
+import Select from '../../components/Select'
 
 export default {
   components: {
@@ -258,6 +258,8 @@ export default {
     // пагинация
     changePage ({ target: { value } }) {
       this.page = value
+    },
+    getIdProduct (e) {
     }
   },
   // эта функция запускается при любом изменении на странице
@@ -284,4 +286,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../scss/product-list.scss"></style>
+<style lang="scss" src="./product-list.scss"></style>

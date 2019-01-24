@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { PRODUCTS_URL } from '../config'
+import { PRODUCTS_URL } from '../../config'
 
 export default {
   state: {

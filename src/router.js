@@ -12,7 +12,7 @@ export default new Router({
     {
       path: '/shop',
       name: 'shop',
-      component: () => import('./views/Shop')
+      component: () => import('./views/Shop/index.vue')
     },
     {
       path: '/newPage',

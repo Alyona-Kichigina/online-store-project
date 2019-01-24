@@ -29,7 +29,7 @@ export default {
   name: 'ProductItem',
   props: {
     productsArray: {
-      type: Object,
+      type: Array,
       require: true
     }
   }
