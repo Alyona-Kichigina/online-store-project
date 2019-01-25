@@ -2,7 +2,7 @@
   "products": [
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "name": "Jeans red",
       "imgSlider": [
         {
           "id": "1",
@@ -24,11 +24,27 @@
       "id":"1",
       "url": "/id",
       "color": "red",
-      "category": "jeans"
+      "category": "jeans",
+      "comment": [
+        {
+          "img": "/img/product/single-product/review-1.png",
+          "name": "Blake Ruiz",
+          "date": "12th Feb, 2017 at 05:56 pm",
+          "id": "1",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        },
+        {
+          "img": "/img/product/single-product/review-1.png",
+          "name": "Blake Ruiz",
+          "date": "12th Feb, 2017 at 05:56 pm",
+          "id": "2",
+          "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo"
+        }
+      ]
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Skirts blue",
       "imgSlider": [
         {
           "id": "1",
@@ -37,13 +53,13 @@
         },
         {
           "id": "2",
-          "image": "/img/product/single-product/s-product-2.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-2.png"
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
         },
         {
           "id": "3",
-          "image": "/img/product/single-product/s-product-3.jpg",
-          "previewImage": "/img/product/single-product/s-product-min-3.png"
+          "image": "/img/product/single-product/s-product-1.jpg",
+          "previewImage": "/img/product/single-product/s-product-min-1.png"
         }
       ],
       "price": 18500,
@@ -54,7 +70,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Blouses white",
       "imgSlider": [
         {
           "id": "1",
@@ -80,7 +96,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "name": "Sweater red",
       "imgSlider": [
         {
           "id": "1",
@@ -106,7 +122,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Vests white",
       "imgSlider": [
         {
           "id": "1",
@@ -132,7 +148,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "name": "Jeans red",
       "imgSlider": [
         {
           "id": "1",
@@ -158,7 +174,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Skirts blue",
       "imgSlider": [
         {
           "id": "1",
@@ -184,7 +200,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Blouses white",
       "imgSlider": [
         {
           "id": "1",
@@ -210,7 +226,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "name": "Sweater red",
       "imgSlider": [
         {
           "id": "1",
@@ -236,7 +252,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Vests white",
       "imgSlider": [
         {
           "id": "1",
@@ -262,7 +278,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "name": "Jeans red",
       "imgSlider": [
         {
           "id": "1",
@@ -288,7 +304,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Skirts blue",
       "imgSlider": [
         {
           "id": "1",
@@ -314,7 +330,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Blouses white",
       "imgSlider": [
         {
           "id": "1",
@@ -340,7 +356,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "name": "Sweater red",
       "imgSlider": [
         {
           "id": "1",
@@ -366,7 +382,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Vests white",
       "imgSlider": [
         {
           "id": "1",
@@ -392,7 +408,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "name": "Jeans red",
       "imgSlider": [
         {
           "id": "1",
@@ -418,7 +434,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Skirts blue",
       "imgSlider": [
         {
           "id": "1",
@@ -444,7 +460,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Blouses white",
       "imgSlider": [
         {
           "id": "1",
@@ -470,7 +486,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "name": "Sweater red",
       "imgSlider": [
         {
           "id": "1",
@@ -496,7 +512,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-5.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Vests white",
       "imgSlider": [
         {
           "id": "1",
@@ -522,7 +538,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-1.jpg",
-      "name": "Long Sleeve TShirt red",
+      "name": "Jeans red",
       "imgSlider": [
         {
           "id": "1",
@@ -548,7 +564,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-2.jpg",
-      "name": "Long Sleeve TShirt blue",
+      "name": "Skirts blue",
       "imgSlider": [
         {
           "id": "1",
@@ -574,7 +590,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-3.jpg",
-      "name": "Long Sleeve TShirt white",
+      "name": "Blouses white",
       "imgSlider": [
         {
           "id": "1",
@@ -600,7 +616,7 @@
     },
     {
       "img": "/img/product/feature-product/f-p-4.jpg",
-      "name": "Long Sleeve Vue red",
+      "name": "Sweater red",
       "imgSlider": [
         {
           "id": "1",

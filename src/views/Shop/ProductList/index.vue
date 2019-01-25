@@ -12,13 +12,15 @@
           alt="" class="img-responsive">
       </router-link>
       <div class="product-icon">
-        <button class="button-icon-list-product button-icon">
+        <button
+          class="button-icon-list-product button-icon"
+          @click="likeProductFunction(productItem.id)"
+        >
           <i aria-hidden="true" class="fa fa-heart-o"></i>
         </button>
         <button
           class="button-icon-list-product button-icon"
-          :key="productItem.id"
-          @click="clickFunction"
+          @click="BuyFunction(productItem.id)"
         >
           <i aria-hidden="true" class="fa fa-shopping-cart"></i>
         </button>
@@ -43,7 +45,11 @@ export default {
       type: Array,
       require: true
     },
-    clickFunction: {
+    BuyFunction: {
+      type: Function,
+      require: true
+    },
+    likeProductFunction: {
       type: Function,
       require: true
     }

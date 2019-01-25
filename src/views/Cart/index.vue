@@ -44,6 +44,7 @@ export default {
   computed: {
     productsA () {
       return this.$store.getters.accessListOfProductById
+      
     }
   },
   mounted () {

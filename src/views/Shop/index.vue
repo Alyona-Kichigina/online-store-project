@@ -10,10 +10,9 @@
             <div
               v-for="category in categories"
               :key="category.id"
-              class="filter-item"
-            >
-              <a href="#"
-                 @click="dispatchFilterProductsCategory">{{ category.title }}</a>
+              class="filter-item pointer"
+              @click="dispatchFilterProductsCategory(category.id)"
+            >{{ category.title }}
             </div>
           </div>
         </div>
@@ -71,7 +70,7 @@
           </select>
           <!--<Select :options="options" v-model="selected" placeholder="placeholder" @tag="SelectFunction"/>-->
         </div>
-        <CardProductList :productsArray="products" :clickFunction="getIdProduct"/>
+        <CardProductList :productsArray="products" :BuyFunction="getIdProduct" :likeProductFunction="getIdLikeProduct"/>
         <div class="message-no-products" v-if="this.products.length === 0">
           Sorry, but you have already yet saw all our products in this category.
         </div>
@@ -161,7 +160,8 @@ export default {
       ],
       filters: {
         colors: [],
-        priceRange: [0, 15000]
+        priceRange: [0, 15000],
+        categoryProduct: []
       },
       config: {
         value: [
@@ -207,7 +207,8 @@ export default {
         { title: 'Sweaters', id: 'sweaters' },
         { title: 'Vests', id: 'vests' }
       ],
-      categoryName: ''
+      productId: '',
+      likeProductId: ''
     }
   },
   // выполняетсся при инициализации
@@ -236,15 +237,16 @@ export default {
     // вызов мутаций vuex
     ...mapMutations([
       'filterProductsByTitle',
-      'filterProductsByColor'
+      'filterProductsByColor',
+      'filterProductByCategory'
     ]),
     // кнопка фильтра текста товара
     dispatchFilterProductsName () {
       this.filterProductsByTitle(this.name)
     },
     // фильтр по категориям товара
-    dispatchFilterProductsCategory () {
-      console.log(this.categories.id)
+    dispatchFilterProductsCategory (e) {
+      this.filters.categoryProduct = e
     },
     // newValue помещаем в объект params
     fetchProducts (params = {}) {
@@ -259,7 +261,13 @@ export default {
     changePage ({ target: { value } }) {
       this.page = value
     },
+    // получаем id товара при нажатии на кнопку Купить
     getIdProduct (e) {
+      this.$store.commit('saveIdProduct', this.productId = e)
+    },
+    // получаем id товара при нажатии на кнопку Нравится
+    getIdLikeProduct (e) {
+      this.$store.commit('saveIdProductLike', this.likeProductId = e)
     }
   },
   // эта функция запускается при любом изменении на странице
@@ -281,9 +289,12 @@ export default {
     },
     selected (newValue) {
       this.fetchProducts({ quantity: newValue })
+    },
+    'filters.categoryProduct': function () {
+      this.fetchProducts()
     }
   }
 }
 </script>
 
-<style lang="scss" src="./product-list.scss"></style>
+<style lang="scss" src="./style.scss"></style>

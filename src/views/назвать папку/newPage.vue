@@ -79,14 +79,14 @@
 
 <script>
 import { mapMutations } from 'vuex'
-import Select from '../components/Select'
-import buttonBlue from '../components/buttonBlue'
-import CardProduct from './ProductPage/CardProduct/CardProduct'
-import Breadcrumbs from '../components/Breadcrumbs'
-import FormNewsletter from '../components/FormNewsletter'
-import CommentBlock from '../components/CommentBlock'
-import EvaluationProduct from '../components/EvaluationProduct'
-import ReviewBlock from '../components/ReviewBlock'
+import Select from '../../components/Select'
+import buttonBlue from '../../components/buttonBlue'
+import CardProduct from '../ProductPage/CardProduct/CardProduct'
+import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs'
+import FormNewsletter from '../../components/FormNewsletter/FormNewsletter'
+import CommentBlock from '@/components/Comments/CommentBlock'
+import EvaluationProduct from '../../components/EvaluationProduct'
+import ReviewBlock from '../../components/ReviewBlock'
 import vueSlider from 'vue-slider-component'
 export default {
   name: 'newPage',

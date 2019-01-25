@@ -28,19 +28,19 @@
       <div class="container">
         <div class="clients-wrapper">
           <div class="item">
-            <img src="../../public/img/clients-logo/c-logo-1.png" alt="">
+            <img src="../../../public/img/clients-logo/c-logo-1.png" alt="">
           </div>
           <div class="item">
-            <img src="../../public/img/clients-logo/c-logo-2.png" alt="">
+            <img src="../../../public/img/clients-logo/c-logo-2.png" alt="">
           </div>
           <div class="item">
-            <img src="../../public/img/clients-logo/c-logo-3.png" alt="">
+            <img src="../../../public/img/clients-logo/c-logo-3.png" alt="">
           </div>
           <div class="item">
-            <img src="../../public/img/clients-logo/c-logo-4.png" alt="">
+            <img src="../../../public/img/clients-logo/c-logo-4.png" alt="">
           </div>
           <div class="item">
-            <img src="../../public/img/clients-logo/c-logo-5.png" alt="">
+            <img src="../../../public/img/clients-logo/c-logo-5.png" alt="">
           </div>
         </div>
       </div>
@@ -51,44 +51,13 @@
           <h2>Featured Products</h2>
           <p>Who are in extremely love with eco friendly system.</p>
         </div>
-
-          <!--<div class="col col1">-->
-            <!--<div-->
-              <!--v-for="item of items"-->
-              <!--:key="item.id"-->
-            <!--&gt;-->
-              <!--<div-->
-                <!--class="f_p_item"-->
-                <!--:to="item.url"-->
-              <!--&gt;-->
-                <!--<div class="f_p_img">-->
-                  <!--<img :src="item.imageSrc" alt="">-->
-                  <!--<div class="p_icon">-->
-                    <!--<a href="#">-->
-                      <!--<i class="lnr lnr-heart"></i>-->
-                    <!--</a>-->
-                    <!--<a href="#">-->
-                      <!--<i class="lnr lnr-cart"></i>-->
-                    <!--</a>-->
-                  <!--</div>-->
-                <!--</div>-->
-
-                <!--<div class="text-xs-center">-->
-                  <!--<div>-->
-                    <!--<h4>{{item.title}}</h4>-->
-                    <!--<h5>{{item.text}}</h5>-->
-                  <!--</div>-->
-                <!--</div>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
       </div>
     </section>
   </div>
 </template>
 
 <script>
-import sideBar from '../views/layout/components/sideBar/index'
+import sideBar from './components/sideBar'
 export default {
   data () {
     return {
@@ -121,4 +90,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../views/layout/homo-style.scss"></style>
+<style lang="scss" src="./style.scss"></style>

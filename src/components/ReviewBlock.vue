@@ -30,4 +30,4 @@
   }
 </script>
 
-<style lang="scss" src="../scss/comment.scss"></style>
+<style lang="scss" src="./Comments/comment.scss"></style>

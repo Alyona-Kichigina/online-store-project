@@ -39,7 +39,13 @@
               School in Reading at the age of 15, where she went to secretarial school and then into an insurance office.
               After moving to London and then Hampton, she eventually married her next door neighbour from Reading,
               John Cook'
-          </div><div>2!</div><div>3!</div><div>4</div>
+          </div>
+          <div>Specification</div>
+          <div>
+            <CommentBlock :commentsArray="ad.comment"/>
+            {{ad.comment}}
+          </div>
+          <div>Reviews</div>
         </Tab>
       </section>
     </div>
@@ -50,6 +56,7 @@
 import SliderProduct from '@/components/SliderProduct'
 import CardProduct from './CardProduct/CardProduct'
 import Tab from '@/components/Tab'
+import CommentBlock from '@/components/Comments/CommentBlock'
 export default {
   name: 'productPage',
   props: ['id'],
@@ -67,7 +74,8 @@ export default {
   components: {
     SliderProduct,
     CardProduct,
-    Tab
+    Tab,
+    CommentBlock
   },
   methods: {
     getProductId () {
@@ -88,4 +96,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="./product-page.scss"></style>
+<style lang="scss" src="./style.scss"></style>

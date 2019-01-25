@@ -6,8 +6,13 @@
 	>
 		<td>
 			<div class="media">
-				<img :src="productItem.img" alt="">
-				<p>{{ productItem.name }}</p>
+				<router-link
+					:to="'/product-page/' + productItem.id"
+					class="d-flex"
+				>
+					<img :src="productItem.img" alt="">
+					<p>{{ productItem.name }} {{productItem.id}}</p>
+				</router-link>
 			</div>
 		</td>
 		<td>
@@ -15,6 +20,7 @@
 		</td>
 		<td>
 			<div class="product_count">
+			{{productItem.count}}
 			</div>
 		</td>
 		<td>
@@ -37,5 +43,7 @@ export default {
 </script>
 
 <style scoped>
-
+.d-flex {
+	align-items: center;
+}
 </style>

@@ -21,4 +21,4 @@
   }
 </script>
 
-<style lang="scss" src="../scss/breadcrumbs-style.scss"></style>
+<style lang="scss" src="./style.scss"></style>

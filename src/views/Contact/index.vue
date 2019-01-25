@@ -175,4 +175,4 @@ export default {
 }
 </script>
 
-<style lang="scss" src="../scss/contact-style.scss"></style>
+<style lang="scss" src="./style.scss"></style>

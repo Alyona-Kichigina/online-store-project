@@ -7,7 +7,7 @@ export default new Router({
     {
       path: '',
       name: 'home',
-      component: () => import('./views/Home')
+      component: () => import('./views/layout/Home')
     },
     {
       path: '/shop',
@@ -17,7 +17,7 @@ export default new Router({
     {
       path: '/newPage',
       name: 'newPage',
-      component: () => import('./views/newPage.vue')
+      component: () => import('./views/назвать папку/newPage.vue')
     },
     {
       path: '/Cart',
@@ -27,7 +27,7 @@ export default new Router({
     {
       path: '/Contact',
       name: 'Contact',
-      component: () => import('./views/Contact.vue')
+      component: () => import('./views/Contact/index.vue')
     },
     {
       path: '/product-page/:id',
@@ -38,7 +38,7 @@ export default new Router({
     {
       path: '/personal-area',
       name: 'PersonalArea',
-      component: () => import('./views/PersonalArea.vue')
+      component: () => import('./views/PersonalArea/index.vue')
     }
   ],
   mode: 'history'

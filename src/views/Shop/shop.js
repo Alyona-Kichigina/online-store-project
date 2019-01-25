@@ -34,6 +34,13 @@ export default {
         state.listOfProducts = state.listOfProductsResource
       }
     },
+    filterProductByCategory (state, payload) {
+      if (payload.length !== 0) {
+        state.listOfProducts = state.listOfProductsResource.filter(product => payload.includes(product.category))
+      } else {
+        state.listOfProducts = state.listOfProductsResource
+      }
+    },
     startFetchProducts (state) {
       state.loading = true
     }
@@ -49,6 +56,8 @@ export default {
             })
               break
             case 'priceRange': filtersStr = `${filtersStr}&price_gte=${item[1][0] * 100}&price_lte=${item[1][1] * 100}`
+              break
+            case 'categoryProduct': filtersStr = `${filtersStr}&category=${item[1]}`
               break
           }
         })

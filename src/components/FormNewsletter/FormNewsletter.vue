@@ -25,4 +25,4 @@
   }
 </script>
 
-<style lang="scss" src="../scss/form-newsletter-style.scss"></style>
+<style lang="scss" src="./form-newsletter-style.scss"></style>
