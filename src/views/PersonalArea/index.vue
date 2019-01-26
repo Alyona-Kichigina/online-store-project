@@ -4,12 +4,11 @@
 		<div v-else>
 				<h1>личный кабинет</h1>
 			<div
-				v-for="likeProductItem in likeProductArray"
+				v-for="likeProductItem in likeProductArray.data"
 				:key="likeProductItem.id"
 			>
 				<img :src="likeProductItem.img" alt="">
 				<div class="name">{{ likeProductItem.name }}</div>
-				{{likeProductArray}}
 			</div>
 		</div>
 	</div>

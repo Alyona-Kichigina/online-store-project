@@ -17,33 +17,34 @@ export default {
   name: 'CheckBox',
   computed: {
     checked () {
-      const { checkBoxValue, value = [] } = this
-      return checkBoxValue ? value.includes(checkBoxValue) : value
+      const { checkBoxValue, value } = this
+      return checkBoxValue ? value.includes(checkBoxValue) : !!value
     }
   },
   methods: {
     handleArrayModel () {
-      const { checkBoxValue, value = [] } = this
+      const { checkBoxValue, value } = this
       return value.includes(checkBoxValue)
         ? value.filter(item => item !== checkBoxValue)
         : [...value, checkBoxValue]
     },
     handleInput () {
-      const data = this.checkBoxValue ?  this.handleArrayModel() : !this.value
-      this.$emit('input', data, this.id)
+      const data = this.checkBoxValue ? this.handleArrayModel() : !this.value
+      this.$emit('input', data, this.modelKey)
     }
   },
   props: {
     id: String,
     value: {
       type: [Array, Boolean],
-      default: false
+      default: () => []
     },
     label: {
       type: String,
       default: ''
     },
-    checkBoxValue: String
+    checkBoxValue: String,
+    modelKey: String
   }
 }
 </script>

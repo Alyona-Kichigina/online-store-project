@@ -12,6 +12,9 @@
 import Header from './views/layout/components/header'
 import Footer from './views/layout/components/footer'
 export default {
+  mounted () {
+    this.$store.commit('initIdProduct')
+  },
   components: {
     Header,
     Footer

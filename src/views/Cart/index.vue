@@ -49,7 +49,6 @@ export default {
   },
   mounted () {
     this.$store.dispatch('fetchProductById')
-    this.$store.dispatch('initIdProduct')
   }
 }
 </script>

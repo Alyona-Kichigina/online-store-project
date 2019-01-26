@@ -17,8 +17,22 @@ export default {
   },
   mutations: {
     // добавляем id товара в массив
-  	saveIdProduct (state, payload) {
-      state.productDetails.id.push(payload)
+    saveIdProduct (state, payload) {
+      // добавляем в массив новый объект
+      const newCartState = [...state.productDetails.id, payload]
+      // при каждом добавлении в корзину обновляем localStorage
+      // добавляем массив строкой
+      localStorage.setItem('productInCart', JSON.stringify(newCartState))
+      // добавляем id товаров в массив
+      state.productDetails.id = newCartState
+    },
+    [initIdProduct]: (state) => {
+      // TODO: обновить комментарии
+      // Читает данные из localStorage и парсит строку в массив из localStorage
+      const productInCart = JSON.parse(localStorage.getItem('productInCart'))
+      if (productInCart) {
+        state.productDetails.id = productInCart
+      }
     },
     // добавляем товар в список
     saveProductById (state, payload) {
@@ -26,11 +40,9 @@ export default {
     }
   },
   actions: {
-    [fetchProductById]: async ({ commit, getters }, { token }) => {
+    [fetchProductById]: async ({ commit, getters }) => {
       // доступ к массиву с id
       let id = getters.accessListId
-      id.push(token)
-      //console.log( id )
       // если длина массива с id больше 0
       if (id.length > 0) {
         try {
@@ -47,12 +59,6 @@ export default {
           console.log(e)
         }
       }
-    },
-    [initIdProduct]: async ({ dispatch }) => {
-      // Сохраняет данные в текущий local store
-      const token = localStorage.getItem('token')
-      // если в token есть данный, то вызываем функцию и передаем данные для авторизации
-      if (token) dispatch(fetchProductById, { token })
     }
   },
   getters: {

@@ -8,10 +8,10 @@
           </div>
           <div class="filter-list">
             <div
-              v-for="category in categories"
+              v-for="category in productsCategories"
               :key="category.id"
               class="filter-item pointer"
-              @click="dispatchFilterProductsCategory(category.id)"
+              @click="updateFilters(category.id, 'categoryProduct')"
             >{{ category.title }}
             </div>
           </div>
@@ -22,55 +22,50 @@
           </div>
           <div class="filter-list-wrapper">
             <div class="title">Name</div>
-            <input type="text" @change="handleChangePriceName" v-model="name">
-            <button @click="dispatchFilterProductsName">search</button>
+            <input type="text" @change="handleChangePriceName" v-model="sortedProductName">
+            <button @click="dispatchFilterProductsByName">search</button>
           </div>
           <div class="pl-5 filter-list-wrapper">
             <div class="title">Color</div>
             <CheckBox
               v-for="item in checkboxColor"
               :id="item.title"
-              v-model="filters.colors"
-            >{{ item.title }}</CheckBox>
-            {{ filters.colors }}
-            <input type="checkbox" id="white" name="feature"
-                   value="white"
-                   v-model="filters.colors"
-            />
-            <label for="white">White</label>
-            <input type="checkbox" id="blue" name="feature"
-                   value="blue"
-                   v-model="filters.colors"
-            />
-            <label for="blue">Blue</label>
-            <input type="checkbox" id="red" name="feature"
-                   value="red"
-                   v-model="filters.colors"
-            />
-            <label for="red">Red</label>
+              modelKey="colors"
+              :checkBoxValue="item.value"
+              :value="filters.colors"
+              @input="updateFilters"
+              :label="item.title"/>
           </div>
           <div class="filter-list-wrapper">
             <div class="title">Price</div>
-            <vue-slider ref="slider" v-model="filters.priceRange" v-bind="config" />
+            <vue-slider
+              ref="slider"
+              :value="filters.priceRange"
+              @input="updateRange"
+              v-bind="priceRangeConfig"
+            />
           </div>
         </div>
       </div>
       <div class="wrapper-products">
         <div class="filter-top">
           <select
-            v-model="selected"
+            v-model="displayedQuantityOfProducts"
           >
             <option
-              v-for="option in options"
+              v-for="option in quantityOptions"
               :value="option.value"
               :key="option.value"
             >
               {{ option.text }}
             </option>
           </select>
-          <!--<Select :options="options" v-model="selected" placeholder="placeholder" @tag="SelectFunction"/>-->
         </div>
-        <CardProductList :productsArray="products" :BuyFunction="getIdProduct" :likeProductFunction="getIdLikeProduct"/>
+        <CardProductList
+          :productsArray="products"
+          :BuyFunction="putProductInCart"
+          :likeProductFunction="likeProduct"
+        />
         <div class="message-no-products" v-if="this.products.length === 0">
           Sorry, but you have already yet saw all our products in this category.
         </div>
@@ -138,32 +133,27 @@ import vueSlider from 'vue-slider-component'
 import paginationButton from '../../components/paginationButton'
 import CheckBox from '../../components/CheckBox'
 import CardProductList from './ProductList/index'
-import Select from '../../components/Select'
 
 export default {
   components: {
     vueSlider,
     paginationButton,
     CheckBox,
-    CardProductList,
-    Select
+    CardProductList
   },
   data: function () {
     return {
-      name: '',
-      checkedNames: [],
-      selected: '8',
-      options: [
+      sortedProductName: '',
+      displayedQuantityOfProducts: '8',
+      quantityOptions: [
         { text: 'Show 8', value: '8' },
         { text: 'Show 16', value: '16' },
         { text: 'Show 24', value: '24' }
       ],
       filters: {
-        colors: [],
-        priceRange: [0, 15000],
-        categoryProduct: []
+        priceRange: [0, 15000]
       },
-      config: {
+      priceRangeConfig: {
         value: [
           0,
           299
@@ -195,20 +185,17 @@ export default {
       page: 1,
       isLastProductLoaded: false,
       checkboxColor: [
-        {title: 'Black', value: 'Black'},
-        {title: 'Gold', value: 'Gold'},
-        {title: 'Red', value: 'Red'},
-        {title: 'Blue', value: 'Blue'}
+        { title: 'White', value: 'white' },
+        { title: 'Red', value: 'red' },
+        { title: 'Blue', value: 'blue' }
       ],
-      categories: [
+      productsCategories: [
         { title: 'Jeans', id: 'jeans' },
         { title: 'Skirts', id: 'skirts' },
         { title: 'Blouses', id: 'blouses' },
         { title: 'Sweaters', id: 'sweaters' },
         { title: 'Vests', id: 'vests' }
-      ],
-      productId: '',
-      likeProductId: ''
+      ]
     }
   },
   // выполняетсся при инициализации
@@ -220,7 +207,7 @@ export default {
     // если длина массива товара равна количеству выводимого товара,
     // то в isLastProductLoaded передается true, если нет то false
     // parseInt(this.selected) передает то что в селекте
-    this.isLastProductLoaded = this.products.length === parseInt(this.selected)
+    this.isLastProductLoaded = this.products.length === parseInt(this.displayedQuantityOfProducts)
   },
   // вызывается при изменении в productList
   computed: {
@@ -232,7 +219,7 @@ export default {
   methods: {
     // value input фильтра текста товара
     handleChangePriceName ({ target: { value } }) {
-      this.name = value
+      this.sortedProductName = value
     },
     // вызов мутаций vuex
     ...mapMutations([
@@ -241,19 +228,15 @@ export default {
       'filterProductByCategory'
     ]),
     // кнопка фильтра текста товара
-    dispatchFilterProductsName () {
-      this.filterProductsByTitle(this.name)
-    },
-    // фильтр по категориям товара
-    dispatchFilterProductsCategory (e) {
-      this.filters.categoryProduct = e
+    dispatchFilterProductsByName () {
+      this.filterProductsByTitle(this.sortedProductName)
     },
     // newValue помещаем в объект params
     fetchProducts (params = {}) {
       // помещаем объекты фильтра и все параметры (newValue), которые попадают в fetchProducts в обект params
       // если params.page не передается, то page будет 1, т.е первой страницей
       if (!params.page) this.page = 1
-      const quantity = this.selected
+      const quantity = this.displayedQuantityOfProducts
       // вызываем fetchProducts в vuex ... в filters.colors будет ["white", "blue"]
       this.$store.dispatch('fetchProducts', { quantity, filters: this.filters, ...params })
     },
@@ -262,12 +245,18 @@ export default {
       this.page = value
     },
     // получаем id товара при нажатии на кнопку Купить
-    getIdProduct (e) {
-      this.$store.commit('saveIdProduct', this.productId = e)
+    putProductInCart (id) {
+      this.$store.commit('saveIdProduct', id)
     },
     // получаем id товара при нажатии на кнопку Нравится
-    getIdLikeProduct (e) {
-      this.$store.commit('saveIdProductLike', this.likeProductId = e)
+    likeProduct (id) {
+      this.$store.commit('saveIdProductLike', id)
+    },
+    updateRange (value) {
+      this.updateFilters(value, 'priceRange')
+    },
+    updateFilters (value, key) {
+      this.filters = { ...this.filters, [key]: value }
     }
   },
   // эта функция запускается при любом изменении на странице
@@ -277,21 +266,11 @@ export default {
       // передаем Object { page: "newValue" } в fetchProducts
       this.fetchProducts({ page: newValue })
     },
-    'filters.colors': function () {
-      // передаем { filters: {colors: Array [ "white" ]}} в fetchProducts
+    filters () {
       this.fetchProducts()
     },
-    'filters.priceRange': function () {
-      this.fetchProducts()
-    },
-    name (newValue) {
-      this.fetchProducts({ name: newValue })
-    },
-    selected (newValue) {
+    displayedQuantityOfProducts (newValue) {
       this.fetchProducts({ quantity: newValue })
-    },
-    'filters.categoryProduct': function () {
-      this.fetchProducts()
     }
   }
 }
