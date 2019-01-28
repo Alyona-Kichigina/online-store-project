@@ -19,10 +19,11 @@
       .filter-list {
         padding: 15px 30px;
         .filter-item {
-          margin-bottom: 13px;
-          a {
-            color: $dip;
-            font-size: 14px;
+          color: $dip;
+          font-size: 14px;
+          line-height: 2.5;
+          &:hover {
+            color: $baseColor;
           }
         }
       }
@@ -37,6 +38,9 @@
           font-size: 14px;
           margin-bottom: 22px;
           margin-top: 10px;
+        }
+        .button-blue {
+          line-height: 35px;
         }
       }
     }

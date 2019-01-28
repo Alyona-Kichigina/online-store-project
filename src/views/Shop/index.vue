@@ -17,13 +17,13 @@
           </div>
         </div>
         <div class="filter-block">
-          <div class="filter-title">
-            Product Filters
-          </div>
+          <div class="filter-title">Product Filters</div>
           <div class="filter-list-wrapper">
             <div class="title">Name</div>
-            <input type="text" @change="handleChangePriceName" v-model="sortedProductName">
-            <button @click="dispatchFilterProductsByName">search</button>
+            <div class="d-flex">
+              <input type="text" @change="handleChangePriceName" v-model="sortedProductName">
+              <button @click="dispatchFilterProductsByName" class="button-blue">search</button>
+            </div>
           </div>
           <div class="pl-5 filter-list-wrapper">
             <div class="title">Color</div>

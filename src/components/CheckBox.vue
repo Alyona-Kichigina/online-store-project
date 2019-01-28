@@ -54,4 +54,14 @@ export default {
       border-color: #fc4b6c;
     }
   }
+  .field-container {
+    display: flex;
+    align-items: center;
+    .form-check-label {
+      padding-left: 20px;
+    }
+    &:hover {
+      color: $baseColor;
+    }
+  }
 </style>
