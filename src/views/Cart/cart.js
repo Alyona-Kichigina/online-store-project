@@ -7,33 +7,35 @@ export const initIdProduct = 'initIdProduct'
 export default {
   state: {
     // список товаров
-    listOfProductById: {},
+    listOfProductById: { data: [] },
     // детальная информация по товару
-    productDetails: [
-	    { id: String },
-	    { count: Number }
-    ],
+    productDetails: [],
     token: undefined
   },
   mutations: {
     // добавляем id товара в массив
-    saveIdProduct (state, payload) {
-    	console.log(state.productDetails, payload, [state.productDetails.count])
-		    //state.productDetails.id.includes(payload) ? state.productDetails['count'] = 1, state.productDetails.count)
-      // добавляем в массив новый объект
-      const newCartState = [...state.productDetails.id, payload]
+    saveIdProduct (state, id) {
+      // проверяем есть ли это id
+      const currentProductIndex = state.productDetails.findIndex(({ id: ProductID }) => id === ProductID)
+      const newCartState = currentProductIndex >= 0
+        // если id есть, то прибавляем количество товара
+        ? state.productDetails.map((item, index) => {
+          if (index === currentProductIndex) item.count += 1
+          return item
+          // если нет id, то добавляем id и count: 1 внутрь productDetails
+        }) : [...state.productDetails, { id, count: 1 }]
       // при каждом добавлении в корзину обновляем localStorage
       // добавляем массив строкой
       localStorage.setItem('productInCart', JSON.stringify(newCartState))
       // добавляем id товаров в массив
-      state.productDetails.id = newCartState
+      state.productDetails = newCartState
     },
     [initIdProduct]: (state) => {
       // TODO: обновить комментарии
       // Читает данные из localStorage и парсит строку в массив из localStorage
       const productInCart = JSON.parse(localStorage.getItem('productInCart'))
       if (productInCart) {
-        state.productDetails.id = productInCart
+        state.productDetails = productInCart
       }
     },
     // добавляем товар в список
@@ -49,10 +51,10 @@ export default {
       if (id.length > 0) {
         try {
           let ProductsId = ''
-          id.forEach(function (item, index) {
+          id.forEach(function ({ id }, index) {
             // добавляем к имеющемуся id еще один id
             // при чем если id едиственный, то добаляем ?, если нет, то &
-            ProductsId = ProductsId + `${index === 0 ? '?' : '&'}id=${item}`
+            ProductsId = ProductsId + `${index === 0 ? '?' : '&'}id=${id}`
           })
           // делаем запрос на сервер с получивщейся строкой с id товара
           const { data } = await axios.get(`${PRODUCTS_URL}${ProductsId}`)
@@ -70,7 +72,7 @@ export default {
     },
     // доступ к массиву с id
     accessListId (state) {
-      return state.productDetails.id
+      return state.productDetails
     }
   }
 }

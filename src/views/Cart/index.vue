@@ -10,7 +10,7 @@
           <th>Total</th>
         </tr>
         </thead>
-        <ProductItem :productsArray="productsA.data"></ProductItem>
+        <ProductItem :productsArray="mergedData"></ProductItem>
       </table>
       <div class="border-bottom">
         <div class="cart-button-block">
@@ -38,18 +38,25 @@
 import ProductItem from './ProductItem'
 export default {
   name: 'Cart',
-  components: {
-    ProductItem
-  },
   computed: {
     productsA () {
       return this.$store.getters.accessListOfProductById
-      
+    },
+    porudctsList () {
+      return this.$store.getters.accessListId
+    },
+    // мержим два массива в один
+    mergedData () {
+      return this.productsA.data
+        .map((item, index) => ({ ...item, count: this.porudctsList[index].count }))
     }
   },
   mounted () {
     this.$store.dispatch('fetchProductById')
-  }
+  },
+	components: {
+		ProductItem
+	}
 }
 </script>
 

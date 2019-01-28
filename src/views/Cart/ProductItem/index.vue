@@ -20,7 +20,7 @@
 		</td>
 		<td>
 			<div class="product_count">
-			
+			{{productItem.count}}
 			</div>
 		</td>
 		<td>
