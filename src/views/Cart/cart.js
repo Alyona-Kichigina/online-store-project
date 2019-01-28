@@ -18,7 +18,7 @@ export default {
   mutations: {
     // добавляем id товара в массив
     saveIdProduct (state, payload) {
-    	console.log(state.productDetails, payload)
+    	console.log(state.productDetails, payload, [state.productDetails.count])
 		    //state.productDetails.id.includes(payload) ? state.productDetails['count'] = 1, state.productDetails.count)
       // добавляем в массив новый объект
       const newCartState = [...state.productDetails.id, payload]

@@ -1,6 +1,8 @@
 <template>
   <div class="product-image-description">
     <div class="container">
+      <!--кнопка назад-->
+      <a @click="$router.go(-1)">back</a>
       <div class="wrapper">
         <SliderProduct :slides="ad.imgSlider"/>
         <div class="text">
