@@ -9,15 +9,17 @@ export default {
     // список товаров
     listOfProductById: {},
     // детальная информация по товару
-    productDetails: {
-      id: [],
-      count: 1
-    },
+    productDetails: [
+	    { id: String },
+	    { count: Number }
+    ],
     token: undefined
   },
   mutations: {
     // добавляем id товара в массив
     saveIdProduct (state, payload) {
+    	console.log(state.productDetails, payload)
+		    //state.productDetails.id.includes(payload) ? state.productDetails['count'] = 1, state.productDetails.count)
       // добавляем в массив новый объект
       const newCartState = [...state.productDetails.id, payload]
       // при каждом добавлении в корзину обновляем localStorage

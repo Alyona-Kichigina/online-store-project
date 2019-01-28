@@ -15,21 +15,30 @@
 <script>
 export default {
   name: 'CheckBox',
+  // вызывается при изменении
   computed: {
     checked () {
       const { checkBoxValue, value } = this
+      // если checkBoxValue = true, то проверяем содержит ли value в себе checkBoxValue
+      // иначе value = false
       return checkBoxValue ? value.includes(checkBoxValue) : !!value
     }
   },
   methods: {
     handleArrayModel () {
       const { checkBoxValue, value } = this
+      // если value содержит checkBoxValue,
       return value.includes(checkBoxValue)
+        // то фильтруем value и создаем новый массив с содержимым, которое не равно checkBoxValue
         ? value.filter(item => item !== checkBoxValue)
+        // иначе в value добааляем checkBoxValue
         : [...value, checkBoxValue]
     },
     handleInput () {
+    	// если checkBoxValue = true, то выполняем handleArrayModel(),
+      // иначе value становится true или false
       const data = this.checkBoxValue ? this.handleArrayModel() : !this.value
+      // генерирум событие input и передаем data и this.modelKey именно этого чекбокса
       this.$emit('input', data, this.modelKey)
     }
   },
