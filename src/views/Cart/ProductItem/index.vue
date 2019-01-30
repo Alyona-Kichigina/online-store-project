@@ -24,7 +24,7 @@
 			</div>
 		</td>
 		<td>
-			<div class="price">$720.00</div>
+			<div class="price">{{ ((productItem.price / 100)  * productItem.count) .toFixed(2) }}</div>
 		</td>
 	</tr>
 	</tbody>

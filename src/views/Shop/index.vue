@@ -135,12 +135,6 @@ import CheckBox from '../../components/CheckBox'
 import CardProductList from './ProductList/index'
 
 export default {
-  components: {
-    vueSlider,
-    paginationButton,
-    CheckBox,
-    CardProductList
-  },
   data: function () {
     return {
       sortedProductName: '',
@@ -246,7 +240,7 @@ export default {
     },
     // получаем id товара при нажатии на кнопку Купить
     putProductInCart (id) {
-      this.$store.commit('saveIdProduct', id)
+      this.$store.commit('saveId', id)
     },
     // получаем id товара при нажатии на кнопку Нравится
     likeProduct (id) {
@@ -272,6 +266,12 @@ export default {
     displayedQuantityOfProducts (newValue) {
       this.fetchProducts({ quantity: newValue })
     }
+  },
+  components: {
+    vueSlider,
+    paginationButton,
+    CheckBox,
+    CardProductList
   }
 }
 </script>

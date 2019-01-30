@@ -7,15 +7,16 @@ export const initIdProduct = 'initIdProduct'
 export default {
   state: {
     // список товаров
-    listOfProductById: { data: [] },
+    ProductsInCart: { data: [] },
     // детальная информация по товару
     productDetails: [],
     token: undefined
   },
   mutations: {
     // добавляем id товара в массив
-    saveIdProduct (state, id) {
-      // проверяем есть ли это id
+    saveId (state, id, count) {
+    	//console.log(id)
+      // проверяем есть ли этот id
       const currentProductIndex = state.productDetails.findIndex(({ id: ProductID }) => id === ProductID)
       const newCartState = currentProductIndex >= 0
         // если id есть, то прибавляем количество товара
@@ -31,7 +32,6 @@ export default {
       state.productDetails = newCartState
     },
     [initIdProduct]: (state) => {
-      // TODO: обновить комментарии
       // Читает данные из localStorage и парсит строку в массив из localStorage
       const productInCart = JSON.parse(localStorage.getItem('productInCart'))
       if (productInCart) {
@@ -39,14 +39,14 @@ export default {
       }
     },
     // добавляем товар в список
-    saveProductById (state, payload) {
-      state.listOfProductById = { ...state.listOfProductById, ...payload }
+    addProductInCart (state, payload) {
+      state.ProductsInCart = { ...state.ProductsInCart, ...payload }
     }
   },
   actions: {
     [fetchProductById]: async ({ commit, getters }) => {
       // доступ к массиву с id
-      let id = getters.accessListId
+      let id = getters.accessId
       // если длина массива с id больше 0
       if (id.length > 0) {
         try {
@@ -58,7 +58,7 @@ export default {
           })
           // делаем запрос на сервер с получивщейся строкой с id товара
           const { data } = await axios.get(`${PRODUCTS_URL}${ProductsId}`)
-          commit('saveProductById', { data })
+          commit('addProductInCart', { data })
         } catch (e) {
           console.log(e)
         }
@@ -67,11 +67,11 @@ export default {
   },
   getters: {
     // доступ к списку товаров
-    accessListOfProductById (state) {
-      return state.listOfProductById
+    accessProductsInCart (state) {
+      return state.ProductsInCart
     },
     // доступ к массиву с id
-    accessListId (state) {
+    accessId (state) {
       return state.productDetails
     }
   }

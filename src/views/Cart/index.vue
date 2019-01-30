@@ -17,11 +17,6 @@
           <div>
             <button class="button-white">Update Cart</button>
           </div>
-          <div>
-            <input type="text" placeholder="Coupon Code">
-            <button class="border-radius-button button-blue">Apply</button>
-            <button class="button-white">Close Coupon</button>
-          </div>
         </div>
       </div>
       <div class="border-bottom">
@@ -40,10 +35,10 @@ export default {
   name: 'Cart',
   computed: {
     productsA () {
-      return this.$store.getters.accessListOfProductById
+      return this.$store.getters.accessProductsInCart
     },
     porudctsList () {
-      return this.$store.getters.accessListId
+      return this.$store.getters.accessId
     },
     // мержим два массива в один
     mergedData () {
